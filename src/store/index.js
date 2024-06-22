@@ -5,13 +5,15 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-  },
-  getters: {
+    cart: [
+      { name: '商品名A' },
+      { name: '商品名B' },
+      { name: '商品名C' },
+    ]
   },
   mutations: {
-  },
-  actions: {
-  },
-  modules: {
+    addItemToCart(state, payload) {
+      state.cart.push(payload);
+    }
   }
 })
