@@ -15,5 +15,6 @@ export default new Vuex.Store({
     addItemToCart(state, payload) {
       state.cart.push(payload);
     }
+    //payloadはinputで入力したデータ、関数addItemToCartに渡されている（新しい商品をcart配列に追加するために使用される）
   }
 })

@@ -19,7 +19,11 @@ export default {
   methods: {
     addItem() {
       this.$store.commit("addItemToCart", { name: this.itemName });
+      //commitメソッドは、Vuexストアのミューテーションを呼び出す
+      //name: this.itemNameは、ミューテーションに渡されるpayloadで、
+      //ここではテキストフィールドに入力された文字列がnameプロパティとして渡される
       this.itemName = "";
+      //次の入力のためテキストをクリアしておく
     },
   },
 };
